@@ -103,18 +103,24 @@ h6{
 }   
 p{
     font-size: 1rem;
-    color: var(--text-white);
+    color: var(--text-black);
     line-height: 1.625rem;
 
 }
 .card{
     border-radius: .625rem;
     background-color:var(--bg-white);
-    box-shadow: .5084rem 3.125rem 4.6875rem rgb(0 0 0 / 8%);
-    padding: 3.75rem 3.125rem 4.6575 rem;
- --webkit-transition: all .4s;
- transition: all .4s ;
- border: 0;
+    box-shadow: .5084rem 3.125rem 4.6875rem rgb(0 0 0 8%);
+    padding: 3.75rem 3.125rem 4.6575rem;
+ --webkit-transition: all 0.4s;
+ transition: all 0.4s ;
+ border:2;
+
+}
+
+.card:hover{
+    transition: all 0.4s ;
+    box-shadow: 2px 3px 4px solid black;
 }
 
 @keyframes movebounce{
@@ -130,4 +136,116 @@ p{
         -webkit-transform: translateY(0);
         transition: transition(0);
     }
+}
+
+.header_wrapper .navbar{
+    padding: .9375rem 0;
+    background-color: transparent;
+    transition:0.3s ease-in-out;
+}
+.header_wrapper .navbar-toggler{
+    border: 0;
+    color: var(--text-black);
+line-height: 2;
+box-shadow: none;
+}
+
+.header_wrapper .nav-item{
+
+    margin: 0 .625rem;
+}
+
+.header_wrapper .nav-item .nav-link{
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--primary-text);
+    display: inline-block;
+
+}
+.header_wrapper .nav-item .nav-link:hover,
+.header_wrapper .nav-item .nav-link:focus
+.header_wrapper .nav-item .nav-link.active{
+    color: var(--secondary-text);
+}
+.navbar .header-scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--bg-white);
+    box-shadow:.5084rem 1.1419rem 2.5rem rgb( 0 0 0 /8%) ;
+    transition: 0.2s ease-in-out;
+}
+
+.banner_wrapper{
+    background-image: url(images/top-banner-img/Top-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+.banner_wrapper p{
+
+    text-align: center;
+    max-width:60% ;
+    color: var(--text-white);
+}
+
+.banner_wrapper .top-right-sec{
+    position: relative;
+    background-image: url(images/top-banner-img/top-right-bg.png);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.banner_wrapper .animate-img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translate(-50%);
+    z-index: 22;
+} 
+.banner_wrapper .animate-img .aimg1{
+    left: -5.6875rem;
+    position:absolute;
+    animation-name: movebounce;
+    -webkit-animation-name: movebounce;
+    -webkit-animation-delay: 100ms;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    -webkit-animation-direction:alternate ;
+}
+.banner_wrapper .animate-img .aimg2{
+    left: 5.5rem;
+    animation-name: movebounce;
+    -webkit-animation-name: movebounce;
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
+    animation-direction: alternate;
+    -webkit-animation-direction:alternate ;
+}
+.home .card:hover{
+    -webkit-transform: translateY(-0.625rem);
+    transform: translatey(-0.625rem);
+}
+.home .icon-box{
+    text-align: center;
+    margin: 0 auto 2.5rem;
 }
