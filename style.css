@@ -227,6 +227,7 @@ box-shadow: none;
     -webkit-animation-direction:alternate ;
 }
 .banner_wrapper .animate-img .aimg2{
+    margin-left: 500px;
     left: 5.5rem;
     animation-name: movebounce;
     -webkit-animation-name: movebounce;
